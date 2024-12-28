@@ -22,7 +22,7 @@ const activeIndex = ref('1')
           alt="Element logo"
       />
     </el-menu-item>
-    <el-menu-item index="2" route="introduction">
+    <el-menu-item index="2" route="/introduction">
       <el-icon>
         <School/>
       </el-icon>
@@ -32,13 +32,13 @@ const activeIndex = ref('1')
       <template #title>竞赛获奖</template>
       <el-sub-menu index="3-1">
         <template #title>五大学科竞赛</template>
-        <el-menu-item index="3-1-1" route="rewards/mathematics">数学</el-menu-item>
-        <el-menu-item index="3-1-2" route="rewards/physics">物理</el-menu-item>
-        <el-menu-item index="3-1-3" route="rewards/chemistry">化学</el-menu-item>
-        <el-menu-item index="3-1-4" route="rewards/biology">生物</el-menu-item>
-        <el-menu-item index="3-1-5" route="rewards/informatics">信息</el-menu-item>
+        <el-menu-item index="3-1-1" route="/rewards/mathematics">数学</el-menu-item>
+        <el-menu-item index="3-1-2" route="/rewards/physics">物理</el-menu-item>
+        <el-menu-item index="3-1-3" route="/rewards/chemistry">化学</el-menu-item>
+        <el-menu-item index="3-1-4" route="/rewards/biology">生物</el-menu-item>
+        <el-menu-item index="3-1-5" route="/rewards/informatics">信息</el-menu-item>
       </el-sub-menu>
-      <el-menu-item index="3-2" route="rewards/chinese">
+      <el-menu-item index="3-2" route="/rewards/chinese">
         语文
       </el-menu-item>
     </el-sub-menu>
