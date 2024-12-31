@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {ref} from 'vue'
-import {School, TrendCharts} from "@element-plus/icons-vue";
+import {School, TrendCharts, Sugar, OfficeBuilding} from "@element-plus/icons-vue";
 
 const activeIndex = ref('1')
 
@@ -29,10 +29,12 @@ const activeIndex = ref('1')
       学校介绍
     </el-menu-item>
     <el-sub-menu index="3">
-      <el-icon>
-        <TrendCharts />
-      </el-icon>
-      <template #title>竞赛获奖</template>
+      <template #title>
+        <el-icon>
+          <TrendCharts />
+        </el-icon>
+        竞赛获奖
+      </template>
       <el-sub-menu index="3-1">
         <template #title>五大学科竞赛</template>
         <el-menu-item index="3-1-1" route="/rewards/mathematics">数学</el-menu-item>
@@ -47,11 +49,17 @@ const activeIndex = ref('1')
     </el-sub-menu>
     <el-menu-item index="4" style="margin-left:auto" route="/jumpLink?url=http://love.jsscszx.xyz">
       <template #title>
+        <el-icon>
+          <Sugar/>
+        </el-icon>
         <a href="http://love.jsscszx.xyz">表白墙</a>
       </template>
     </el-menu-item>
     <el-menu-item index="5" route="/jumpLink" >
       <template #title>
+        <el-icon>
+          <OfficeBuilding/>
+        </el-icon>
         <a href="https://gitlab.jsscszx.xyz">gitlab</a>
       </template>
     </el-menu-item>

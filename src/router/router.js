@@ -17,6 +17,12 @@ const router = createRouter({
             activeTitle: '/jumpLink'
         },
         path: '/jumpLink',component:jumpLink
+    },{
+        meta: {
+            title: '首页',
+            activeTitle: '/home'
+        },
+        path: '/home',component:indexPage
     }
     ]
     }
