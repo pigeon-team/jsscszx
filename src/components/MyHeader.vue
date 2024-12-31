@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {ref} from 'vue'
-import {School} from "@element-plus/icons-vue";
+import {School, TrendCharts} from "@element-plus/icons-vue";
 
 const activeIndex = ref('1')
 
@@ -15,7 +15,7 @@ const activeIndex = ref('1')
       :ellipsis="false"
       :router="true"
   >
-    <el-menu-item index="1" >
+    <el-menu-item index="1" route="/home">
       <img
           style="height:50px"
           src="./icons/908fa0ec08fa513dbd4a09e37b6d55fbb2fbd92f.jpg"
@@ -29,6 +29,9 @@ const activeIndex = ref('1')
       学校介绍
     </el-menu-item>
     <el-sub-menu index="3">
+      <el-icon>
+        <TrendCharts />
+      </el-icon>
       <template #title>竞赛获奖</template>
       <el-sub-menu index="3-1">
         <template #title>五大学科竞赛</template>
@@ -42,12 +45,12 @@ const activeIndex = ref('1')
         语文
       </el-menu-item>
     </el-sub-menu>
-    <el-menu-item index="4" style="margin-left:auto" route="love wall">
+    <el-menu-item index="4" style="margin-left:auto" route="/jumpLink?url=http://love.jsscszx.xyz">
       <template #title>
         <a href="http://love.jsscszx.xyz">表白墙</a>
       </template>
     </el-menu-item>
-    <el-menu-item index="5" route="gitlab" >
+    <el-menu-item index="5" route="/jumpLink" >
       <template #title>
         <a href="https://gitlab.jsscszx.xyz">gitlab</a>
       </template>

@@ -1,9 +1,5 @@
 <script setup>
 import MyHeader from "@/components/MyHeader.vue";
-import {useRoute, useRouter} from "vue-router";
-
-const router = useRouter()
-const route = useRoute()
 
 </script>
 
@@ -14,7 +10,7 @@ const route = useRoute()
         <MyHeader />
       </el-header>
       <el-main>
-        <router-view :key=route.fullPath />
+        <router-view></router-view>
       </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
