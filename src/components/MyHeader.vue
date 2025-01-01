@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {ref} from 'vue'
-import {School, TrendCharts, Sugar, OfficeBuilding} from "@element-plus/icons-vue";
+import {School, TrendCharts, GoldMedal, TrophyBase} from "@element-plus/icons-vue";
 
 const activeIndex = ref('1')
 
@@ -31,38 +31,35 @@ const activeIndex = ref('1')
     <el-sub-menu index="3">
       <template #title>
         <el-icon>
-          <TrendCharts />
+          <TrendCharts/>
         </el-icon>
         竞赛获奖
       </template>
       <el-sub-menu index="3-1">
-        <template #title>五大学科竞赛</template>
+        <template #title>
+          <el-icon>
+            <GoldMedal/>
+          </el-icon>
+          五大学科竞赛
+        </template>
         <el-menu-item index="3-1-1" route="/rewards/mathematics">数学</el-menu-item>
         <el-menu-item index="3-1-2" route="/rewards/physics">物理</el-menu-item>
         <el-menu-item index="3-1-3" route="/rewards/chemistry">化学</el-menu-item>
         <el-menu-item index="3-1-4" route="/rewards/biology">生物</el-menu-item>
         <el-menu-item index="3-1-5" route="/rewards/informatics">信息</el-menu-item>
       </el-sub-menu>
-      <el-menu-item index="3-2" route="/rewards/chinese">
-        语文
-      </el-menu-item>
+      <el-sub-menu index="3-2">
+        <template #title>
+          <el-icon>
+            <TrophyBase/>
+          </el-icon>
+          其余竞赛
+        </template>
+        <el-menu-item index="3-2" route="/rewards/chinese">
+          语文
+        </el-menu-item>
+      </el-sub-menu>
     </el-sub-menu>
-    <el-menu-item index="4" style="margin-left:auto" route="/jumpLink?url=http://love.jsscszx.xyz">
-      <template #title>
-        <el-icon>
-          <Sugar/>
-        </el-icon>
-        <a href="http://love.jsscszx.xyz">表白墙</a>
-      </template>
-    </el-menu-item>
-    <el-menu-item index="5" route="/jumpLink" >
-      <template #title>
-        <el-icon>
-          <OfficeBuilding/>
-        </el-icon>
-        <a href="https://gitlab.jsscszx.xyz">gitlab</a>
-      </template>
-    </el-menu-item>
   </el-menu>
 </template>
 
