@@ -3,15 +3,7 @@ import {createWebHistory, createRouter} from "vue-router";
 import indexPage from '@/components/bodys/indexPage.vue'
 import jumpLink from '@/components/bodys/jumpLink.vue'
 import introduction from '@/components/bodys/introduction.vue'
-import reward from "@/components/bodys/rewards/reward.vue";
-
-// rewards
-import mathematics from '@/components/bodys/rewards/mathematics.vue'
-import chinese from '@/components/bodys/rewards/chinese.vue'
-import physics from '@/components/bodys/rewards/physics.vue'
-import chemistry from '@/components/bodys/rewards/chemistry.vue'
-import biology from '@/components/bodys/rewards/biology.vue'
-import informatics from '@/components/bodys/rewards/informatics.vue'
+import thanks from '@/components/bodys/thanks.vue'
 
 const router = createRouter({
         history: createWebHistory(),
@@ -41,31 +33,10 @@ const router = createRouter({
             path: '/introduction', component: introduction
         }, {
             meta: {
-                title: '获奖记录',
-                activeTitle: '/rewards'
+                title: '鸣谢',
+                activeTitle: '/thanks'
             },
-            path: '/rewards/:id', component: reward,
-            children: [
-                {
-                    path: '/rewards/mathematics',
-                    component: mathematics
-                }, {
-                    path: '/rewards/chinese',
-                    component: chinese
-                }, {
-                    path: '/rewards/physics',
-                    component: physics
-                }, {
-                    path: '/rewards/chemistry',
-                    component: chemistry
-                }, {
-                    path: '/rewards/biology',
-                    component: biology
-                }, {
-                    path: '/rewards/informatics',
-                    component: informatics
-                }
-            ]
+            path: '/thanks', component: thanks
         }
         ]
     }

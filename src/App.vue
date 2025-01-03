@@ -1,5 +1,6 @@
 <script setup>
 import MyHeader from "@/components/MyHeader.vue";
+import MyFooter from "@/components/MyFooter.vue";
 
 </script>
 
@@ -7,12 +8,14 @@ import MyHeader from "@/components/MyHeader.vue";
   <div class="common-layout">
     <el-container>
       <el-header>
-        <MyHeader />
+        <MyHeader/>
       </el-header>
       <el-main>
-        <router-view :key="$route.fullPath" />
+        <router-view :key="$route.fullPath"/>
       </el-main>
-      <el-footer>Footer</el-footer>
+      <el-footer>
+        <MyFooter/>
+      </el-footer>
     </el-container>
   </div>
 </template>
@@ -25,6 +28,16 @@ import MyHeader from "@/components/MyHeader.vue";
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.el-container {
+  min-height: 100%;
+}
+
+.el-footer{
+  background: var(--el-color-primary-light-3);
+  height: 150px;
+  bottom: 0;
 }
 
 </style>
