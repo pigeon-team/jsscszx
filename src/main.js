@@ -1,6 +1,6 @@
 import '@/assets/base.css'
 
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 
 import ElementPlus from 'element-plus'
@@ -10,9 +10,28 @@ const app = createApp(App)
 
 import router from "@/router/router.js"
 
-import MavonEditor from 'mavon-editor'
-import 'mavon-editor/dist/css/index.css'
-
 import store from 'store'
 
-app.use(ElementPlus).use(router).use(MavonEditor).use(store).mount('#app')
+import VMdEditor from '@kangc/v-md-editor';
+import '@kangc/v-md-editor/lib/style/base-editor.css';
+import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
+import '@kangc/v-md-editor/lib/theme/style/github.css';
+import VMdPreview from '@kangc/v-md-editor/lib/preview';
+import '@kangc/v-md-editor/lib/style/preview.css'
+
+// highlightjs
+import hljs from 'highlight.js';
+
+
+VMdPreview.use(githubTheme, {
+
+    Hljs: hljs,
+});
+
+
+VMdEditor.use(githubTheme, {
+
+    Hljs: hljs,
+});
+
+app.use(ElementPlus).use(router).use(store).use(VMdEditor).use(VMdPreview).mount('#app')

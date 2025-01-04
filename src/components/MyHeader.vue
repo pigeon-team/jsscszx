@@ -38,28 +38,10 @@ const activeIndex = ref('1')
         开发人员名单
       </template>
     </el-menu-item>
-    <el-dropdown>
-    <span class="el-dropdown-link">
-      <el-avatar>
-
-      </el-avatar>
-    </span>
-      <template #dropdown>
-        <el-dropdown-item>
-          注册
-        </el-dropdown-item>
-      </template>
-    </el-dropdown>
   </el-menu>
 </template>
 
 <style scoped>
 
-.el-dropdown-link {
-  cursor: pointer;
-  color: var(--el-color-primary);
-  display: flex;
-  align-items: center;
-}
 
 </style>

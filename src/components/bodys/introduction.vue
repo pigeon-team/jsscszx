@@ -1,12 +1,12 @@
 <script setup>
 
-import HEAD from './introduction/head.vue'
+import RemoteText from './introduction/text.vue'
 
 </script>
 
 <template>
   <el-container style="width: 60%;">
-    <HEAD style="margin: 50px;"/>
+    <RemoteText style="margin: 50px;min-height: 100px;"/>
   </el-container>
 </template>
 
