@@ -6,7 +6,7 @@ import RemoteText from './introduction/text.vue'
 
 <template>
   <el-container style="width: 60%;">
-    <RemoteText style="margin: 50px;min-height: 100px;"/>
+    <RemoteText />
   </el-container>
 </template>
 

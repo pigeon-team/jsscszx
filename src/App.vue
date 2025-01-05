@@ -11,7 +11,7 @@ import MyFooter from "@/components/MyFooter.vue";
         <MyHeader/>
       </el-header>
       <el-main>
-        <router-view :key="$route.fullPath"/>
+        <router-view/>
       </el-main>
       <el-footer>
         <MyFooter/>
