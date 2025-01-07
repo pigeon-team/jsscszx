@@ -36,4 +36,8 @@ VMdEditor.use(githubTheme, {
 VMdEditor.use(createKatexPlugin())
 VMdPreview.use(createKatexPlugin())
 
+import axios from "axios";
+
+axios.defaults.baseURL
+
 app.use(ElementPlus).use(router).use(store).use(VMdEditor).use(VMdPreview).mount('#app')
