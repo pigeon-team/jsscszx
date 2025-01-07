@@ -3,6 +3,7 @@
 import axios from "axios";
 import {ref} from "vue";
 import * as test from "node:test";
+import {Refresh} from "@element-plus/icons-vue";
 
 const text = ref("# Loading...")
 
@@ -16,6 +17,7 @@ function tester() {
   })
   // console.log(text);
 }
+
 tester();
 
 </script>
@@ -25,6 +27,9 @@ tester();
     <v-md-preview :text="text"/>
     <el-button @click="tester">
       update
+      <el-icon>
+        <Refresh/>
+      </el-icon>
     </el-button>
   </div>
 </template>
