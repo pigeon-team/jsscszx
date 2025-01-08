@@ -2,7 +2,6 @@
 
 import axios from "axios";
 import {ref} from "vue";
-import * as test from "node:test";
 import {Refresh} from "@element-plus/icons-vue";
 
 const text = ref("# Loading...")
