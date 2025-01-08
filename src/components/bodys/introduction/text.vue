@@ -9,7 +9,7 @@ const text = ref("# Loading...")
 
 function tester() {
   // console.log("tester");
-  axios.get("http://download.jsscszx.xyz/jsscszx/api/get article.php", {
+  axios.get("https://api.jsscszx.asia/jsscszx/api/get article.php", {
     params: {
       id: 1
     },
