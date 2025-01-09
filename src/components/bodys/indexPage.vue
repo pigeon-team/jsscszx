@@ -4,8 +4,14 @@
 
 <template>
   <el-carousel type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3 text="2xl" justify-center="1">{{item}}</h3>
+    <el-carousel-item >
+      <el-image src="@/components/bodys/index/1.png" fit="contain" alt="1"/>
+    </el-carousel-item>
+    <el-carousel-item >
+      <el-image src="@/components/bodys/index/2.png" />
+    </el-carousel-item>
+    <el-carousel-item >
+      <img src="@/components/bodys/index/1.png" alt="1">
     </el-carousel-item>
   </el-carousel>
 </template>
